@@ -13,6 +13,19 @@ app.use(routes);
  * Body: Corpo da requisicao - criar ou alterar
  */
 
+ /**
+  * npm install knex --save
+  * npm install sqlite3 --save
+  * npx knex init
+  * npx knex migrate:make create_ongs
+  * Set the `useNullAsDefault` flag to hide this warning.
+  * configura a migrate e : npx knex migrate:latest
+  * desfazer a ultima migrate: npx knex migrate:rollback
+  * npx knex migrate:status
+  * caso nao crie pode-se deletardb.sqlite e executar de novo npx knex migrate:latest
+  * 
+  */
+
 
 app.listen(3333);
 

@@ -1,8 +1,14 @@
 const express = require('express');
 const routes = require('./routes');
+const cors = require('cors');
+
 
 const app = express();
 
+app.use(cors()); // em dev só cors ja é suficiente
+// app.use(cors({
+//   origin: 'http://meuapp.com'
+// })); // em prod allow o end que quer
 app.use(express.json());
 app.use(routes);
 

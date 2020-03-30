@@ -1,25 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react';
+import Header from './Header';
+
 
 function App() {
+  const [count, setCounter] = useState(0);
+  // Array[valor, funcaoDeAtualizacao]
+  function increment(){
+    // count++;
+    setCounter(count + 1);
+  }
+  function decrement(){
+    setCounter(count - 1);
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header title="Semana Homni Stack"/>
+      <Header>
+        <h3>Conter: {count}</h3> 
+        <button onClick={increment} >Increment</button>
+        <button onClick={decrement} >Increment</button>
+      </Header>
+    </>
   );
 }
 

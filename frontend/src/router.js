@@ -9,7 +9,6 @@ import Incidents from './pages/Incidents';
 import Ongs from './pages/Ongs';
 
 export default function Routes(){
-
   return (
     <BrowserRouter>
       <Switch>

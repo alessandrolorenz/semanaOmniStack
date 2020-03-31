@@ -7,7 +7,6 @@ import './styles.css';
 import logoImg from '../../assets/logo.svg';
 
 export default function Incidents() {
-
   const [ongs, setOngs] = useState([]);
   const history = useHistory();
 

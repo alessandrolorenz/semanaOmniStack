@@ -1,6 +1,7 @@
 const express = require('express');
 const routes = require('./routes');
 const cors = require('cors');
+const {errors} = require('celebrate')
 
 
 const app = express();
@@ -11,6 +12,7 @@ app.use(cors()); // em dev só cors ja é suficiente
 // })); // em prod allow o end que quer
 app.use(express.json());
 app.use(routes);
+app.use(errors());
 
 /**
  * tipos de parametros
